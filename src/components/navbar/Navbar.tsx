@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <nav className=" w-full px-9  sticky top-0 bg-white shadow-md  py-2  z-30">
       <div className="flex items-center justify-between lg:justify-around ">
-        <a href="/">
+        <a href="/users">
           <Image
             src={logo}
             alt="more copy systems logo"
