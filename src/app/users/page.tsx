@@ -12,7 +12,6 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useState } from "react";
 
 interface User {
   id: string;
@@ -24,28 +23,27 @@ interface User {
   avatar: string;
 }
 
-// Generate mock users data
-const generateUsers = (count: number): User[] => {
-  return Array.from({ length: count }, () => ({
-    id: faker.string.uuid(),
-    name: faker.person.fullName(),
-    email: faker.internet.email(),
-    role: faker.helpers.arrayElement([
-      "Admin",
-      "User",
-      "Editor",
-      "Moderator",
-      "Viewer",
-    ]),
-    status: faker.helpers.arrayElement(["active", "inactive"]),
-    lastActive: faker.date.recent().toLocaleDateString(),
-    avatar: faker.image.avatar(),
-  }));
-};
+// Set a consistent seed for faker
+faker.seed(123);
+
+// Generate mock users data outside the component with fixed dates
+const USERS: User[] = Array.from({ length: 10 }, (_, index) => ({
+  id: faker.string.uuid(),
+  name: faker.person.fullName(),
+  email: faker.internet.email(),
+  role: faker.helpers.arrayElement([
+    "Admin",
+    "User",
+    "Editor",
+    "Moderator",
+    "Viewer",
+  ]),
+  status: faker.helpers.arrayElement(["active", "inactive"]),
+  lastActive: new Date(2024, 0, 20 - index).toLocaleDateString(), // Fixed dates counting back from Jan 20, 2024
+  avatar: faker.image.avatar(),
+}));
 
 export default function UsersPage() {
-  const [users] = useState(() => generateUsers(10));
-
   return (
     <div className="container mx-auto py-10">
       <Card>
@@ -63,7 +61,7 @@ export default function UsersPage() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {users.map((user) => (
+              {USERS.map((user) => (
                 <TableRow key={user.id}>
                   <TableCell className="flex items-center gap-3">
                     <Avatar>
