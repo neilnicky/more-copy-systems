@@ -24,37 +24,21 @@ export default function Products() {
             <TabsTrigger value="papercutters">Paper Cutters</TabsTrigger>
           </TabsList>
 
-          <TabsContent value="photocopiers" className="">
-            <ProductImg type="Photocopiers" />
-          </TabsContent>
+          <TabsContent value="photocopiers" className=""></TabsContent>
 
-          <TabsContent value="printers">
-            <ProductImg type="Printers" />
-          </TabsContent>
+          <TabsContent value="printers"></TabsContent>
 
-          <TabsContent value="scanners">
-            <ProductImg type="Scanners" />
-          </TabsContent>
+          <TabsContent value="scanners"></TabsContent>
 
-          <TabsContent value="laminators">
-            <ProductImg type="Laminators" />
-          </TabsContent>
+          <TabsContent value="laminators"></TabsContent>
 
-          <TabsContent value="inks">
-            <ProductImg type="Inks" />
-          </TabsContent>
+          <TabsContent value="inks"></TabsContent>
 
-          <TabsContent value="papers">
-            <ProductImg type="Papers" />
-          </TabsContent>
+          <TabsContent value="papers"></TabsContent>
 
-          <TabsContent value="binders">
-            <ProductImg type="Binders" />
-          </TabsContent>
+          <TabsContent value="binders"></TabsContent>
 
-          <TabsContent value="papercutters">
-            <ProductImg type="PaperCutters" />
-          </TabsContent>
+          <TabsContent value="papercutters"></TabsContent>
         </Tabs>
       </MaxWidthWrapper>
     </section>

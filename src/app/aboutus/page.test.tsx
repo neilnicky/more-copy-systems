@@ -1,10 +1,10 @@
-import Products from "./page";
+import About from "./page";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 
-describe("Product", () => {
-  it("renders a product page", () => {
-    render(<Products />);
+describe("Page", () => {
+  it("renders a heading", () => {
+    render(<About />);
 
     const heading = screen.getByRole("heading", { level: 2 });
 
