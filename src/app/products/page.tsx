@@ -1,3 +1,4 @@
+import Counter from "@/components/Counter";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { ProductImg } from "@/components/products/ProductImg";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -9,6 +10,7 @@ export default function Products() {
         <h2 className="text-3xl md:text-5xl font-semibold text-center ">
           Products
         </h2>
+        {/* <ProductImg type="Photocopiers" key={"photocopiers"} /> */}
         <Tabs
           defaultValue="photocopiers"
           className="w-full flex flex-col justify-center"
@@ -40,6 +42,7 @@ export default function Products() {
 
           <TabsContent value="papercutters"></TabsContent>
         </Tabs>
+        <Counter initialCount={0} />
       </MaxWidthWrapper>
     </section>
   );

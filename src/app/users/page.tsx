@@ -31,15 +31,9 @@ const USERS: User[] = Array.from({ length: 10 }, (_, index) => ({
   id: faker.string.uuid(),
   name: faker.person.fullName(),
   email: faker.internet.email(),
-  role: faker.helpers.arrayElement([
-    "Admin",
-    "User",
-    "Editor",
-    "Moderator",
-    "Viewer",
-  ]),
+  role: faker.helpers.arrayElement(["Admin", "User", "Viewer"]),
   status: faker.helpers.arrayElement(["active", "inactive"]),
-  lastActive: new Date(2024, 0, 20 - index).toLocaleDateString(), // Fixed dates counting back from Jan 20, 2024
+  lastActive: new Date(2024, 0, 20 - index).toLocaleDateString(), // dates counting back from Jan 20, 2024
   avatar: faker.image.avatar(),
 }));
 
@@ -85,7 +79,9 @@ export default function UsersPage() {
                   </TableCell>
                   <TableCell>
                     <Badge
-                      variant={user.status === "active" ? "default" : "secondary"}
+                      variant={
+                        user.status === "active" ? "default" : "secondary"
+                      }
                       className={
                         user.status === "active"
                           ? "bg-green-100 text-green-800"

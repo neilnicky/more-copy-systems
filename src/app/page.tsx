@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import Products from "@/components/products/Products";
 import GoogleReview from "@/components/GoogleReview";
 import BajajFin from "@/components/BajajFin";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Brands />
       <GoogleReview />
       <Contact />
+      <Footer />
     </div>
   );
 }
