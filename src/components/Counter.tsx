@@ -12,12 +12,12 @@ export default function Counter({ initialCount }: { initialCount: number }) {
     setCount((prev) => prev - 1);
   };
   const restart = () => {
-    setCount(initialCount);
+    setCount(0);
   };
   return (
     <div className="flex flex-col justify-center items-center mt-20">
       <h1 className="text-center" data-testid="count">
-        Count: {count}
+        {count}
       </h1>
       <div className="gap-4 flex text-center text-5xl">
         <button onClick={increment}>+</button>
