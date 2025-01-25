@@ -3,13 +3,13 @@ import about_img from "../../public/printer-cartoon-img1.png";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import Services from "./Services";
 
-export default function About() {
+export default function About({title }: {title: string}) {
   return (
     <>
       <section className=" my-16 py-10 grainy-dark " id="aboutus">
         <MaxWidthWrapper>
           <h2 className="text-3xl md:text-5xl font-semibold text-center">
-            About us
+            {title}
           </h2>
           <div className="flex justify-center gap-8 max-w-full flex-wrap">
             <div className="max-w-xl px-4 gap-3 flex flex-col">
@@ -53,8 +53,8 @@ export default function About() {
               </p>
             </div>
             <Image
-              src={about_img}
-              alt="Office equipments"
+              src={about_img || "/printer-cartoon-img1.png"}
+              alt={about_img ? "Office equipments" : "Placeholder"}
               width={400}
               className="object-contain pl-8 md:w-[500px]"
             />

@@ -3,29 +3,11 @@
 import { buttonVariants } from "./ui/button";
 import { TypewriterEffect } from "./ui/typewriter-effect";
 
-export function TypewriterEffectDemo() {
-  const words = [
-    {
-      text: "Business",
-    },
-    {
-      text: "solutions",
-    },
-    {
-      text: "and",
-    },
-    {
-      text: "the",
-    },
-    {
-      text: "Personal",
-      className: "text-blue-500",
-    },
-    {
-      text: "Touch.",
-      className: "text-blue-500",
-    },
-  ];
+export function TypewriterEffectDemo({
+  words,
+}: {
+  words: { text: string; className?: string }[];
+}) {
   return (
     <div className="mt-10  ">
       <TypewriterEffect words={words} />
@@ -36,6 +18,7 @@ export function TypewriterEffectDemo() {
             className: "rounded-full mt-8",
           })}
           href="#products"
+          aria-label="View our products"
         >
           View Products
         </a>
@@ -46,6 +29,7 @@ export function TypewriterEffectDemo() {
             className: "rounded-full mt-8 ",
           })}
           href="#services"
+          aria-label="View our services"
         >
           Our Services
         </a>
