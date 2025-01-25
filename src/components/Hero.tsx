@@ -7,16 +7,15 @@ import Image from "next/image";
 const OPTIONS: EmblaOptionsType = { loop: true };
 const SLIDES = HeroImgs.map(({ imgUrl }) => imgUrl);
 
+export const words = [
+  { text: "Business" },
+  { text: "solutions" },
+  { text: "and" },
+  { text: "the" },
+  { text: "Personal", className: "text-blue-500" },
+  { text: "Touch.", className: "text-blue-500" },
+];
 export default function Hero() {
-  const words = [
-    { text: "Business" },
-    { text: "solutions" },
-    { text: "and" },
-    { text: "the" },
-    { text: "Personal", className: "text-blue-500" },
-    { text: "Touch.", className: "text-blue-500" },
-  ];
-
   return (
     <main className="grainy-light ">
       <header className="">

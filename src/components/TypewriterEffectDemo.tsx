@@ -17,7 +17,7 @@ export function TypewriterEffectDemo({
             size: "sm",
             className: "rounded-full mt-8",
           })}
-          href="#products"
+          href="/products"
           aria-label="View our products"
         >
           View Products
