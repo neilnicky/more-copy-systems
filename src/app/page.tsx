@@ -15,7 +15,7 @@ export default function Home() {
       <BajajFin />
       <Products />
       <Brands />
-      <GoogleReview />
+      <GoogleReview rating={5.0} />
       <Contact />
       <Footer />
     </div>
