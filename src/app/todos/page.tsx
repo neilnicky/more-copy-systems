@@ -57,7 +57,7 @@ export default function TodosPage() {
               className="border p-4 rounded-md flex justify-between"
             >
               <h2 className="text-lg font-bold">{todo.title}</h2>
-              <span>Status: {todo.completed ? 'Completed' : 'Pending'}</span>
+              <span>Status: {todo.completed ? 'Completed' : 'Doing'}</span>
             </div>
           ))}
         </div>

@@ -1,9 +1,9 @@
 import { Todo } from '@/types/todo';
 
 let todos: Todo[] = [
-  { id: 1, title: "Learn HTML", completed: false },
-  { id: 2, title: "Learn CSS", completed: false },
-  { id: 3, title: "Learn JavaScript", completed: false },
+  { id: 1, title: "Learn HTML", completed: true },
+  { id: 2, title: "Learn CSS", completed: true },
+  { id: 3, title: "Learn JavaScript", completed: true },
   { id: 4, title: "Learn React", completed: false },
 ];
 
