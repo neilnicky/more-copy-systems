@@ -11,11 +11,11 @@ export default function Home() {
   return (
     <div className="grainy-light">
       <Hero />
-      <About />
-      <BajajFin/>
+      <About title={"About Us"} />
+      <BajajFin />
       <Products />
       <Brands />
-      <GoogleReview />
+      <GoogleReview rating={5.0} />
       <Contact />
       <Footer />
     </div>

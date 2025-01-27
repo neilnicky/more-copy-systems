@@ -1,11 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
-import MaxWidthWrapper from "./MaxWidthWrapper";
-import Image from "next/image";
 import { Star } from "lucide-react";
+import Image from "next/image";
+import MaxWidthWrapper from "./MaxWidthWrapper";
 
-const GoogleReview = () => {
+const GoogleReview = ({rating}: {rating: number}) => {
   // useEffect(() => {
   //   const script = document.createElement("script");
   //   script.src = "https://static.elfsight.com/platform/platform.js";
@@ -33,7 +32,7 @@ const GoogleReview = () => {
           </a>
           <div className="flex flex-col justify-center items-center gap-2">
             <div className="flex ">
-              <p className="text-2xl mr-1 font-bold">5.0</p>
+              <p className="text-2xl mr-1 font-bold">{rating}</p>
               <Star className="text-[#fcba03] fill-[#fcba03]" />
               <Star className="text-[#fcba03] fill-[#fcba03]" />
               <Star className="text-[#fcba03] fill-[#fcba03]" />
