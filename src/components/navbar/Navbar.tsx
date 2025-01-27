@@ -7,29 +7,31 @@ export default function Navbar() {
   return (
     <nav className=" w-full px-9  sticky top-0 bg-white shadow-md  py-2  z-30">
       <div className="flex items-center justify-between lg:justify-around ">
-        <a href="/users" className="font-bold animate-pulse">
-          {/* <Image
+        <a href="/">
+          <Image
             src={logo}
             alt="more copy systems logo"
             width={2880}
             height={1440}
             className="w-[140px]"
-          /> */}
-          USERS
+          />
         </a>
         <div className=" gap-8 hidden md:flex">
-          <a href="/" className="text-black/80  hover:text-blue-500 ">
-            Home
-          </a>
-          <a href="aboutus" className="text-black/80  hover:text-blue-500 ">
+          <Link href="aboutus" className="text-black/80  hover:text-blue-500 ">
             About
-          </a>
-          <a href="products" className="text-black/80  hover:text-blue-500 ">
+          </Link>
+          <Link href="products" className="text-black/80  hover:text-blue-500 ">
             Products
-          </a>
-          <a href="contact" className="text-black/80  hover:text-blue-500 ">
+          </Link>
+          <Link href="contact" className="text-black/80  hover:text-blue-500 ">
             Contact
-          </a>
+          </Link>
+          <Link href="/users" className="text-black/80  hover:text-blue-500 ">
+            Users
+          </Link>
+          <Link href="/todos" className="text-black/80  hover:text-blue-500 ">
+            Todos
+          </Link>
         </div>
         <div className="md:hidden">
           <MobileNavbar />
