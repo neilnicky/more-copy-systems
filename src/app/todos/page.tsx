@@ -1,24 +1,26 @@
-'use client';
+"use client";
 
-import { useTodos } from '@/hooks/useTodo';
-import { useState } from 'react';
+import { useTodos } from "@/hooks/useTodo";
+import { useState } from "react";
 
 export default function TodosPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [newTodo, setNewTodo] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
+  const [newTodo, setNewTodo] = useState("");
   const { todos, isLoading, addTodo, isAddingTodo } = useTodos(searchTerm);
 
   const handleAddTodo = () => {
-    if (newTodo.trim() !== '') {
+    if (newTodo.trim() !== "") {
       addTodo(newTodo, {
-        onSuccess: () => setNewTodo(''),
+        onSuccess: () => setNewTodo(""),
       });
     }
   };
 
   return (
     <div className="p-8">
-      <h1 className="text-2xl font-bold mb-4">Todos</h1>
+      <h1 data-testid="cypress-title" className="text-2xl font-bold mb-4">
+        Todos
+      </h1>
 
       <div className="mb-4">
         <input
@@ -43,7 +45,7 @@ export default function TodosPage() {
           className="bg-blue-500 text-white rounded px-4 py-2 disabled:opacity-50"
           disabled={isAddingTodo}
         >
-          {isAddingTodo ? 'Adding...' : 'Add'}
+          {isAddingTodo ? "Adding..." : "Add"}
         </button>
       </div>
 
@@ -56,8 +58,10 @@ export default function TodosPage() {
               key={todo.id}
               className="border p-4 rounded-md flex justify-between"
             >
-              <h2 className="text-lg font-bold">{todo.title}</h2>
-              <span>Status: {todo.completed ? 'Completed' : 'Doing'}</span>
+              <h2 className="text-lg font-bold" data-testid={`todo-${todo.id}`}>
+                {todo.title}
+              </h2>
+              <span>Status: {todo.completed ? "Completed" : "Doing"}</span>
             </div>
           ))}
         </div>
