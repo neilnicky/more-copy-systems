@@ -43,6 +43,18 @@ export default function Products() {
           <TabsContent value="papercutters"></TabsContent>
         </Tabs>
         <Counter initialCount={0} />
+        <div className="mx-auto mt-12">
+          <label htmlFor="cars">Choose a car:</label>
+
+          <select name="cars" id="cars" multiple>
+            <option value="volvo">Volvo</option>
+            <option value="ford">Ford</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+            <option value="bmw">BMW</option>
+            <option value="ferrari">Ferrari</option>
+          </select>
+        </div>
       </MaxWidthWrapper>
     </section>
   );
