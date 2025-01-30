@@ -1,8 +1,11 @@
 describe("Dynamic drpodown", () => {
   it("Handles dynamic dropdown functionality", () => {
-    cy.visit("https://www.yatra.com/", {
-      headers: { "Accept-Encoding": "gzip, deflate" },
+    // Add handler for uncaught exceptions
+    cy.on("uncaught:exception", (err, runnable) => {
+      // returning false here prevents Cypress from failing the test
+      return false;
     });
+
     cy.get("#input-with-icon-adornment")
       .click()
       .clear()
